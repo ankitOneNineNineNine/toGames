@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        body {
+            background: url("./assets/images/maze.jpg");
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='top'>
+        <button class='reload' onClick="reload()">Replay</button>
+        <a class='home mazeHome' href="./index.html">Home</a>
+        <button class="downloadPuzzle" onclick="download()" download="maze.png">Save Puzzle</button>
+    </div>
+    <hr />
+    <div class='heading'>
+        <div class='selectDimension'>
+            <label for="vol">Dimension (10,20,30):</label>
+            <input type="range" id="vol" name="vol" min="10" max="30" step='10'>
+            <span id='dimensionText'>10</span>
+            <input type="submit" id='submit'>
+        </div>
+
+        <div class='instructions'>
+            <h3 style='display: inline-block'>Start: </h3>
+            <div class='start'></div>
+            <h3 style='display: inline-block;'>End:</h3>
+            <div class='end'></div>
+            <h2 style='display: inline-block'>Press &larr;,&uarr;, &rarr;, &darr; to move!
+            </h2>
+
+        </div>
+
+    </div>
+    <canvas id='mazeCanvas'></canvas>
+
+    <div class='mazeResult'>
+
+    </div>
+
+    <script src="./assets/js/maze.js"></script>
+</body>
+
+</html>
